@@ -5,15 +5,18 @@ My personal AGPL fork of [warpdotdev/warp](https://github.com/warpdotdev/warp). 
 > [!IMPORTANT]
 > Not affiliated with or endorsed by Warp Inc. The upstream README (Warp's product description, contribution flow, support links) lives at [UPSTREAM_README.md](UPSTREAM_README.md).
 
+> [!NOTE]
+> This is the `ilo` branch: [`main`](https://github.com/danieljohnmorris/warp/tree/main)'s local-AI bypass plus ilo-lang context injection at the harness layer. Use [`main`](https://github.com/danieljohnmorris/warp/tree/main) if you only want the local-AI bypass without ilo-lang.
+
 ## Why this fork exists
 
-### 1. A local-AI version of Warp with cloud features stripped
+### 1. A local-AI version of Warp with cloud features stripped (this is what `main` does)
 
 I want to run Warp's terminal and agent UI without signing into Warp's cloud and without paying for Warp's hosted models. The fork swaps Warp's server-mediated AI path for direct calls to local CLIs I already have authenticated (`claude`, `codex`). It removes the auth gate. It hides cloud-only UI: the notifications inbox, the upgrade-required model badges, the "free AI disabled" modal.
 
 This is useful if you already pay for Claude or Codex and don't want a second AI subscription, if you want to keep agent traffic off a third-party server, or if you want to remix Warp's UI without the live cloud dependency.
 
-### 2. A testbench for ilo-lang
+### 2. A testbench for ilo-lang (this is what makes this the `ilo` branch)
 
 I'm using this fork to test how my agent-optimised programming language, [**ilo-lang**](https://ilo-lang.ai), behaves when wired into a working developer tool. Ilo is token-minimal: programs are written and read primarily by LLMs, so every saved token compounds across millions of agent turns.
 
